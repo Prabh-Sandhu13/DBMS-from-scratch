@@ -1,0 +1,1 @@
+{"indexes":{"personid":{"type":"primary"}},"data":[{"name":"khanjika","personid":"1"}],"columns":{"name":"varchar","personid":"int"},"meta":{"createdAt":"2020-12-01 18:07:25.914","rows":0}}

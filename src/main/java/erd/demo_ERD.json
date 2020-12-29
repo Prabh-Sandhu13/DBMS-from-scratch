@@ -1,0 +1,71 @@
+[
+  {
+    "persons": {
+      "relationships": [
+        {
+          "orders": {
+            "refKey": "personid",
+            "type": "childTable"
+          }
+        },
+        {
+          "customers": {
+            "refKey": "personid",
+            "type": "childTable"
+          }
+        }
+      ],
+      "columns": {
+        "name": "varchar",
+        "personid": "int"
+      },
+      "primaryKey": "personid"
+    }
+  },
+  {
+    "orders": {
+      "relationships": [
+        {
+          "persons": {
+            "refKey": "personid",
+            "type": "parentTable"
+          }
+        }
+      ],
+      "columns": {
+        "orderid": "int",
+        "name": "varchar",
+        "personid": "int"
+      },
+      "foreignKey": {
+        "refColumn": "personid",
+        "type": "foreign",
+        "refTable": "persons"
+      },
+      "primaryKey": "orderid"
+    }
+  },
+  {
+    "customers": {
+      "relationships": [
+        {
+          "persons": {
+            "refKey": "personid",
+            "type": "parentTable"
+          }
+        }
+      ],
+      "columns": {
+        "customerid": "int",
+        "name": "varchar",
+        "personid": "int"
+      },
+      "foreignKey": {
+        "refColumn": "personid",
+        "type": "foreign",
+        "refTable": "persons"
+      },
+      "primaryKey": "customerid"
+    }
+  }
+]

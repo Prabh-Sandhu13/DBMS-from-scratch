@@ -1,0 +1,1 @@
+{"indexes":{"orderid":{"type":"primary"},"personid":{"refColumn":"personid","type":"foreign","refTable":"persons"}},"data":[{"orderid":"42","name":"Carron","personid":"1"}],"columns":{"orderid":"int","name":"varchar","personid":"int"},"meta":{"createdAt":"2020-12-01 18:08:23.799","rows":0}}

@@ -1,0 +1,1 @@
+{"indexes":{"customerid":{"type":"primary"},"personid":{"refColumn":"personid","type":"foreign","refTable":"persons"}},"data":[{"customerid":"25","name":"Marry","personid":"1"}],"columns":{"customerid":"int","name":"varchar","personid":"int"},"meta":{"createdAt":"2020-12-01 18:07:52.578","rows":0}}

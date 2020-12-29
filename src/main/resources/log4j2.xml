@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
+        </Console>
+        <File name="UseLogs" fileName="logs/use_query.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+        <File name="ListLogs" fileName="logs/list_query.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+        <File name="CreateLogs" fileName="logs/create_query.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+        <File name="SelectLogs" fileName="logs/select_query.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+        <File name="InsertLogs" fileName="logs/insert_query.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+        <File name="UpdateLogs" fileName="logs/update_query.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+        <File name="DropLogs" fileName="logs/drop_query.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Logger name="sql.parser.UseParser" level="info" additivity="false">
+            <AppenderRef ref="UseLogs" />
+        </Logger>
+        <Logger name="sql.processor.UseProcessor" level="info" additivity="false">
+            <AppenderRef ref="UseLogs" />
+        </Logger>
+        <Logger name="sql.processor.CreateProcessor" level="info" additivity="false">
+            <AppenderRef ref="CreateLogs" />
+        </Logger>
+        <Logger name="sql.parser.CreateParser" level="info" additivity="false">
+            <AppenderRef ref="CreateLogs" />
+        </Logger>
+        <Logger name="sql.processor.UpdateProcessor" level="info" additivity="false">
+            <AppenderRef ref="UpdateLogs" />
+        </Logger>
+        <Logger name="sql.parser.UpdateParser" level="info" additivity="false">
+            <AppenderRef ref="UpdateLogs" />
+        </Logger>
+
+        <Logger name="sql.processor.DropDatabaseProcessor" level="info" additivity="false">
+            <AppenderRef ref="DropLogs" />
+        </Logger>
+        <Logger name="sql.parser.GeneralParser" level="info" additivity="false">
+            <AppenderRef ref="DropLogs" />
+        </Logger>
+
+        <Logger name="sql.parser.ListParser" level="info" additivity="false">
+            <AppenderRef ref="ListLogs" />
+        </Logger>
+        <Logger name="sql.processor.ListProcessor" level="info" additivity="false">
+            <AppenderRef ref="ListLogs" />
+        </Logger>
+        <Logger name="sql.parser.SelectParser" level="info" additivity="false">
+            <AppenderRef ref="SelectLogs" />
+        </Logger>
+        <Logger name="sql.processor.SelectProcessor" level="info" additivity="false">
+            <AppenderRef ref="SelectLogs" />
+        </Logger>
+        <Logger name="sql.parser.InsertParser" level="info" additivity="false">
+            <AppenderRef ref="InsertLogs" />
+        </Logger>
+        <Logger name="sql.processor.InsertProcessor" level="info" additivity="false">
+            <AppenderRef ref="InsertLogs" />
+        </Logger>
+        <Root level="info" additivity="false">
+            <AppenderRef ref="Console" />
+        </Root>
+    </Loggers>
+</Configuration>

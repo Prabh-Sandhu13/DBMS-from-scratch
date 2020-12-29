@@ -1,0 +1,25 @@
+[
+  {
+    "items": {
+      "name": "varchar",
+      "personid": "int"
+    },
+    "entity": "persons"
+  },
+  {
+    "items": {
+      "orderid": "int",
+      "name": "varchar",
+      "personid": "int"
+    },
+    "entity": "orders"
+  },
+  {
+    "items": {
+      "customerid": "int",
+      "name": "varchar",
+      "personid": "int"
+    },
+    "entity": "customers"
+  }
+]
